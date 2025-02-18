@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore Page</title>
-  </head>
-  <body>
-    <h1>Welcome on explore page!</h1>
-  </body>
+    <style>
+        body {
+            background-color: #add8e6;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        a:link { color: darkblue; }
+        a:visited { color: orange; }
+        a:hover { color: darkgreen; }
+        a:active { color: red; }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .italic-blue {
+            color: blue;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            background-color: #e6f7ff;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        th, td {
+            border: 1px solid #4CAF50;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #d5f5e3;
+            color: #2c3e50;
+        }
+
+        td img {
+            border: 2px solid #2980b9;
+            border-radius: 5px;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .navigation a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="explore">Explore New Destinations</h1>
+
+    <p>
+        Traveling is more than just visiting places; it’s about experiencing the culture,  
+        flavors, and stories that make each destination unique.
+    </p>
+
+    <p class="italic-blue">
+        From the bustling streets of Tokyo to the tranquil landscapes of Iceland,  
+        our travel guides provide you with insider tips and must-see attractions.
+    </p>
+
+    <table>
+        <caption>Travel Destination Highlights</caption>
+        <thead>
+            <tr>
+                <th>Images</th>
+                <th>Links</th>
+                <th>Descriptions</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="images/lonely-planet.svg" alt="Lonely Planet" width="100" height="50">
+                </td>
+                <td>
+                    <a href="https://www.lonelyplanet.com" target="_blank">Lonely Planet</a>
+                </td>
+                <td>Explore top destinations worldwide.</td>
+                <td>Popular for travel guides.</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/national-geographic.webp" alt="National Geographic" width="100" height="50">
+                </td>
+                <td>
+                    <a href="https://www.nationalgeographic.com" target="_blank">National Geographic</a>
+                </td>
+                <td>Discover nature and cultures.</td>
+                <td>Ideal for nature enthusiasts.</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/tripadvisor.jpg" alt="Tripadvisor" width="100" height="50">
+                </td>
+                <td>
+                    <a href="https://www.tripadvisor.com" target="_blank">Tripadvisor</a>
+                </td>
+                <td>Find traveler reviews and tips.</td>
+                <td>Great for trip planning.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="navigation">
+        <a href="#explore">Back to Top</a> |
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="popular.html">Popular Destinations</a>
+    </div>
+
+</body>
 </html>

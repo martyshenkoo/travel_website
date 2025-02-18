@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Iryna Martyshenko" />
     <title>Main Page</title>
-  </head>
-  <body>
-    <h1>Welcome on main page!</h1>
-  </body>
+    <style>
+і
+        a:link { color: darkblue; }
+        a:visited { color: orange; }
+        a:hover { color: darkgreen; }
+        a:active { color: red; }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: justify;
+            background-color: #add8e6;
+            margin: 20px;
+        }
+
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .italic {
+            font-style: italic;
+            color: #2980b9;
+        }
+
+   
+        iframe {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            margin: 20px;
+            float: right;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1 id="home">
+        Welcome to <span class="highlight">Martyshenko's Adventures!</span>
+    </h1>
+
+
+    <p class="italic">
+        Discover the world’s most breathtaking destinations with us.  
+        From serene beaches to vibrant cities, we offer travel experiences that create lifelong memories.
+    </p>
+
+    <p>
+        Whether you're planning a solo adventure, a family vacation, or a romantic getaway,  
+        our guides and tips will help you every step of the way.
+    </p>
+
+ 
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092925!2d144.96315781531596!3d-37.8162793797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf4c72d6c6dd7a1b1!2sMelbourne%2C%20Australia!5e0!3m2!1sen!2sua!4v1610000000000!5m2!1sen!2sua" 
+        width="600" 
+        height="400" 
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+
+    <p>
+        <a href="#home">Back to Top</a> | 
+        <a href="about.html">About Us</a> | 
+        <a href="explore.html">Explore</a> | 
+        <a href="popular.html">Popular Destinations</a> | 
+        <a href="https://www.lonelyplanet.com" target="_blank">Visit Lonely Planet</a>
+    </p>
+
+</body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0034)http://127.0.0.1:8080/popular.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popular Page</title>
     <style>
         body {
@@ -95,14 +95,14 @@
     </p>
 
     <div class="destination-images">
-        <a href="images/santorini.webp" target="_blank">
-            <img src="images/santorini.webp" alt="Santorini" width="200" height="150">
+        <a href="./Popular Page_files/santorini.webp" target="_blank">
+            <img src="./Popular Page_files/santorini.webp" alt="Santorini" width="200" height="150">
         </a>
-        <a href="images/park.jpeg" target="_blank">
-            <img src="images/park.jpeg" alt="Banff National Park" width="200" height="150">
+        <a href="./Popular Page_files/park.jpeg" target="_blank">
+            <img src="./Popular Page_files/park.jpeg" alt="Banff National Park" width="200" height="150">
         </a>
-        <a href="images/kyoto.webp" target="_blank">
-            <img src="images/kyoto.webp" alt="Kyoto" width="200" height="150">
+        <a href="./Popular Page_files/kyoto.webp" target="_blank">
+            <img src="./Popular Page_files/kyoto.webp" alt="Kyoto" width="200" height="150">
         </a>
     </div>
 
@@ -194,11 +194,43 @@
     </table>
 
     <p>
-        <a href="#popular">Back to Top</a> |
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="explore.html">Explore</a>
+        <a href="http://127.0.0.1:8080/popular.html#popular">Back to Top</a> |
+        <a href="http://127.0.0.1:8080/index.html">Home</a> |
+        <a href="http://127.0.0.1:8080/about.html">About Us</a> |
+        <a href="http://127.0.0.1:8080/explore.html">Explore</a>
     </p>
 
-</body>
-</html>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+</script>
+
+
+</body></html>
