@@ -1,6 +1,7 @@
-*{
+/* Загальні стилі */
+* {
   margin: 0;
-  padding: 0 ;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -13,7 +14,7 @@ body {
   background-color: rgba(165, 165, 243, 0.4);
 }
 
-
+/* Стилі для заголовків */
 h1 {
   font-size: 28px;
   color: #2c3e50;
@@ -44,6 +45,23 @@ p {
 }
 
 
+p a {
+  color: red;
+  font-weight: bold;
+}
+
+
+h1 + p {
+  font-size: 20px;
+  color: #e67e22;
+}
+
+
+body > h1 {
+  text-transform: uppercase;
+}
+
+
 a {
   color: #2980b9;
   text-decoration: none;
@@ -61,32 +79,16 @@ a:active {
   color: #c0392b;
 }
 
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-  color: #2c3e50;
-  font-size: 18px;
+
+ul > li {
+  font-weight: bold;
 }
 
 ol {
   list-style-type: decimal;
   padding-left: 20px;
-  color: #2c3e50;
+  color: #e31c1c;
   font-size: 18px;
-}
-
-dl {
-  font-size: 18px;
-  color: #555;
-}
-
-dt {
-  font-weight: bold;
-  color: #2980b9;
-}
-
-dd {
-  margin-left: 20px;
 }
 
 table {
@@ -102,7 +104,7 @@ th, td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: center;
-  font-family: 'Luminari', fantasy ;
+  font-family: 'Luminari', fantasy;
 }
 
 th {
@@ -112,11 +114,12 @@ th {
   padding: 15px;
 }
 
-tbody tr:nth-child(even) {
+
+tbody > tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tbody tr.highlight {
+tbody > tr.highlight {
   background-color: #ffebcc;
   font-weight: bold;
 }
@@ -126,9 +129,15 @@ tfoot {
   font-weight: bold;
 }
 
+
 .left-align {
   text-align: left;
 }
+
+.left-align {
+  text-align: left;
+}
+
 
 .center-align {
   text-align: center;
@@ -137,6 +146,7 @@ tfoot {
 .right-align {
   text-align: right;
 }
+
 
 caption {
   font-size: 22px;
