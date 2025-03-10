@@ -17,7 +17,7 @@ Default:
 Small:
 Medium:
 Paragraph default:
-Large: 1
+Large: 1.4
 
 
 -Letter spacing:
@@ -25,19 +25,16 @@ Large: 1
 0.75px
 
 ---02 COLORS
--Primary:#222
+-Primary:#ebebeb
 -Tints: 
-  #fdf2e9;
-  #fae5d3;
-  #eb984e
+
 -Shades:
-#cf711f
-#45260a
 -Accents:
 -Greys:
--#ebebeb(lightest gray that can be used on #333)
--
--
+-#666a6b;
+-#262828;
+-#4c4f50;
+-#202020; 
 
 
 
@@ -66,30 +63,30 @@ html {
 }
 
 body {
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4 )), url("images/main-background.jpg")  ;
+  font-family: "Noto Serif", sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4 )), url("images/main-background.jpg")  ;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #222;
+  color: #ebebeb;;
+}
+
+.section-hero {
+  padding: 1rem 40rem;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
   height: 10vh;
 }
 
 .logo {
-  font-size: 2.4rem ;
+  font-size: 2.8rem ;
+  font-weight: 600;
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
 
 .nav-bar ul {
   display: flex;
@@ -97,8 +94,7 @@ body {
 }
 
 .nav-bar li {
-  margin-right: 4rem;
-  font-size: 2.4rem;
+  margin-right: 6rem;
 }
 
 .nav-bar li:last-child{
@@ -106,18 +102,58 @@ body {
 }
 
 .nav-bar li a {
+  font-size: 2.6rem;
+  font-weight: 500;
   text-decoration: none;
-  color: #222;
-  transition: font-size 0.7s ease;
+  color: #ebebeb;
+  transition: all 0.3s ease;
+}
+
+.nav-bar li a:visited {
+  color:#ebebeb
 }
 .nav-bar li a:hover {
   font-size: 2.7rem;
-  color: #ebebeb;
+  color: #262828;
 }
 
-.nav-bar li a {
 
+.nav-bar li a:active {
+  color: #404243;
+  text-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.3);
 }
-.nav-bar li a {
 
-} 
+.main-content {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  font-size: 9.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4)
+}
+
+.explore-button {
+  width: 30rem;
+  margin-top: 10rem;
+  padding: 3rem 6rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color:#666a6b;
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #4c4f50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.explore-button:active {
+  background-color: #202020; 
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6); 
+}
