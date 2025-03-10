@@ -43,7 +43,7 @@ Large: 1.4
 box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 06 BORDER-RADIUS
-Default: 9px
+Default: 5px
 Medium: 11px
 ---07 WHITESPACE
 
@@ -68,18 +68,34 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #ebebeb;;
+  color: #ebebeb;
+  overflow-y: scroll;
 }
+
+/**************************/
+/* HERO SECTION */
+/**************************/
 
 .section-hero {
   padding: 1rem 40rem;
 }
 
 .navigation {
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  padding: 1rem 40rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
+  transition: all 0.2s ease;
+}
+
+.navigation.scrolled {
+  background-color: #595c5e;
 }
 
 .logo {
@@ -127,7 +143,7 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   font-size: 9.8rem;
   font-weight: 600;
   line-height: 1.5;
@@ -156,4 +172,86 @@ body {
 .explore-button:active {
   background-color: #202020; 
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6); 
+}
+
+/**************************/
+/* EXPLORE SECTION */
+/**************************/
+.section-explore {
+  background-color: rgb(255, 255, 255,0.3);
+}
+
+.main-heading {
+  font-size: 7rem;
+  font-weight: 700;
+  padding: 5rem 0 1rem 0;
+  color: #262828;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4c4f50;
+  text-align: center;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  border-top: 2px solid #262828;
+}
+
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  gap: 1rem;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.destination-card {
+  position: relative;
+  padding: 3rem 0 1rem 0;
+}
+
+.destination-card-image {
+  height: 50rem;
+  width: 100%;
+  border-radius: 3rem;
+  transition: all 0.7s ease;
+}
+
+.destination-card-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.img-text{
+  position: absolute;
+  top: 80%;
+  left: 50%; 
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.destination-card:hover .img-text {
+  color: #d9dadb;
+}
+
+.img-subtext {
+  position: absolute;
+  top: 87%;
+  left: 50%; 
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.destination-card:hover .img-subtext {
+  color: #d9dadb;
+}
+
+.destination-cards .destination-card:nth-last-child(-n+3) { 
+  margin-bottom: 10rem;
 }
