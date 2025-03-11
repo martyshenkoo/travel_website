@@ -6,3 +6,4 @@ window.addEventListener('scroll', function () {
     navigationBar.classList.remove('scrolled');
   }
 });
+
