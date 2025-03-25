@@ -51,7 +51,6 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -63,8 +62,9 @@ html {
 }
 
 body {
-  font-family: "Noto Serif", sans-serif;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4 )), url("images/main-background.jpg")  ;
+  font-family: 'Noto Serif', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url('images/main-background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -72,6 +72,37 @@ body {
   overflow-y: scroll;
 }
 
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Стиль для елементів */
+.item {
+  margin: 5px;
+}
+
+#message,
+#text-node,
+#text-content,
+#parent,
+#remove-element {
+  margin: 10px;
+}
 /**************************/
 /* HERO SECTION */
 /**************************/
@@ -81,11 +112,11 @@ body {
 }
 
 .navigation {
-  position: fixed; 
-  top: 0; 
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; 
+  z-index: 1000;
   padding: 1rem 40rem;
   display: flex;
   justify-content: space-between;
@@ -99,7 +130,7 @@ body {
 }
 
 .logo {
-  font-size: 2.8rem ;
+  font-size: 2.8rem;
   font-weight: 600;
 }
 
@@ -112,7 +143,7 @@ body {
   margin-right: 6rem;
 }
 
-.nav-bar li:last-child{
+.nav-bar li:last-child {
   margin-right: 0;
 }
 
@@ -125,17 +156,16 @@ body {
 }
 
 .nav-bar li a:link {
-  color:#ebebeb
+  color: #ebebeb;
 }
 
 .nav-bar li a:visited {
-  color:#ebebeb
+  color: #ebebeb;
 }
 .nav-bar li a:hover {
   font-size: 2.7rem;
   color: #262828;
 }
-
 
 .nav-bar li a:active {
   color: #404243;
@@ -143,14 +173,14 @@ body {
 }
 
 .main-content {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   font-size: 9.8rem;
   font-weight: 600;
   line-height: 1.5;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4)
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .explore-button {
@@ -163,9 +193,10 @@ body {
   border: none;
   border-radius: 0.5rem;
   color: #e5e6e7;
-  background-color:#666a6b;
+  background-color: #666a6b;
   transition: all 0.3s ease;
-} */
+}
+*/
 
 
 
@@ -185,7 +216,7 @@ body {
 /**************************/
 .section-popular {
   padding: 5rem 0;
-  background-color:  rgba(173, 216, 230,0.2);
+  background-color: rgba(173, 216, 230, 0.2);
 }
 
 .main-heading {
@@ -196,9 +227,8 @@ body {
   text-align: center;
 }
 
-
 .main-heading::after {
-  content: "";
+  content: '';
   display: block;
   width: 60%;
   height: 4px;
@@ -217,7 +247,7 @@ body {
 
 .grid-3-columns {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 1rem;
   justify-items: center;
@@ -235,7 +265,7 @@ body {
   width: 100%;
   border-radius: 3rem;
   transition: all 0.7s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .destination-card-image:hover {
@@ -244,10 +274,10 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.img-text{
+.img-text {
   position: absolute;
   top: 80%;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   font-weight: 700;
   font-size: 3rem;
@@ -260,7 +290,7 @@ body {
 .img-subtext {
   position: absolute;
   top: 87%;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
   font-weight: 500;
@@ -270,19 +300,18 @@ body {
   color: #d9dadb;
 }
 
-
 /**************************/
 /* CTA SECTION */
 /**************************/
 
 .section-cta {
-  padding:5rem 0 ;
-  background-color: rgba(0,0,0,0.3)
+  padding: 5rem 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .grid-2-columns {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   justify-items: center;
   margin: 0 50rem;
@@ -307,14 +336,14 @@ body {
   position: relative;
 }
 
-.form-info{
+.form-info {
   display: flex;
   flex-direction: column;
   margin-bottom: 2.5rem;
   padding: 0 5rem;
 }
 .form-info label {
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
   font-size: 2.4rem;
 }
 
@@ -334,13 +363,13 @@ body {
   padding: 2.5rem 9rem;
   cursor: pointer;
   position: absolute;
-  top:80%;
-  left: 50%; 
+  top: 80%;
+  left: 50%;
   transform: translateX(-50%);
   border-radius: 2.5rem;
   border: none;
   color: #ebebeb;
-  background-color:#4d5237;
+  background-color: #4d5237;
   transition: all 0.5s ease;
 }
 
@@ -352,20 +381,19 @@ body {
 .submit-btn:active {
   background-color: #ebece9;
   color: #2e321a;
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6); 
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6);
 }
 
-
 .form-img {
-  width: 100%;            
-  height: 75rem;         
-  opacity: 0.7;     
-  }
+  width: 100%;
+  height: 75rem;
+  opacity: 0.7;
+}
 
 .form-img img {
-  width: 100%;           
-  height: 100%;          
-  object-fit: cover;     
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /**************************/
@@ -374,7 +402,7 @@ body {
 
 .section-explore {
   padding: 5rem 0;
-  background-color:  rgba(173, 216, 230, 0.2);
+  background-color: rgba(173, 216, 230, 0.2);
 }
 
 .offer-cards {
@@ -386,16 +414,16 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 55rem;
-  background-color:#43686b;
+  background-color: #43686b;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease, all 0.5s ease;
   cursor: pointer;
-  margin-bottom: 7rem
+  margin-bottom: 7rem;
 }
 
 .offer-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
 }
 
@@ -430,14 +458,12 @@ body {
   font-weight: 500;
 }
 
-
-
 .card-list {
   list-style-type: none;
 }
 
 .book-now-btn {
-  background-color:#283e40;
+  background-color: #283e40;
   color: #ebebeb;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   padding: 2rem 4rem;
@@ -450,8 +476,8 @@ body {
 }
 
 .book-now-btn:hover {
-  background-color:#7b9597;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  background-color: #7b9597;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .book-now-btn:active {
@@ -467,17 +493,16 @@ body {
 /* ABOUT US SECTION */
 /**************************/
 .section-about-us {
-  padding:5rem 0 ;
-  background-color: rgba(0,0,0,0.3);
+  padding: 5rem 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .about-us-box {
   background-color: #595c5e;
   overflow: hidden;
   border-radius: 5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15);
 }
-
 
 .about-us-heading {
   font-size: 4rem;
@@ -485,7 +510,7 @@ body {
   padding: 3.5rem 0 3rem 3rem;
 }
 
-.about-us-text{
+.about-us-text {
   font-size: 2rem;
   padding: 0 0 3rem 3rem;
   line-height: 1.5;
@@ -507,22 +532,20 @@ body {
 
 .contact-us-list li a,
 .contact-us-list li a:link,
-.contact-us-list li a:visited
-{
+.contact-us-list li a:visited {
   text-decoration: none;
   color: #ebebeb;
-} 
+}
 .contact-us-list li a:hover {
   text-decoration: underline;
 }
 
 .contact-us-list li a:active {
   box-shadow: 0 0 12px rgba(0, 50, 50, 0.8); /* Subtle teal glow */
-  background: rgba(77, 82, 55,0.9); /* Muted teal background */
+  background: rgba(77, 82, 55, 0.9); /* Muted teal background */
   color: #ffffff; /* Bright text on click */
   border-radius: 8px; /* Rounded corners */
 }
-
 
 .contact-us-item {
   display: flex;
@@ -549,23 +572,18 @@ body {
 
 .sm-icon-link,
 .sm-icon-link:link,
-.sm-icon-link:visited{
+.sm-icon-link:visited {
   color: #ebebeb;
   transition: all 0.4 ease;
 }
 
 .sm-icon-link:hover {
   color: #1c2b2d;
-
 }
-
 
 .sm-icon-link:active {
-  color:  #040606
-
-
+  color: #040606;
 }
-
 
 .about-us-iframe {
   width: 100%;
@@ -577,11 +595,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-
-
-
-
 
 /**************************/
 /* FOOTER SECTION */
