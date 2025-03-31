@@ -13,9 +13,6 @@
       rel="stylesheet" />
   </head>
   <body>
-
-
-
     <div class="section-hero">
       <div class="navigation">
         <div class="logo">TRAVEL</div>
@@ -34,29 +31,11 @@
         <div>Explore the</div>
         <div>Beauty of the</div>
         <div>Beautiful World</div>
-        <button class="explore-button">Explore Now</button>
+        <button class="explore-button" onmouseover="changeButtonColor()">
+          Explore Now
+        </button>
       </div>
     </div>
-
-    <div class="buttons">
-      <button id="change-bg-btn">Change background</button>
-      <button id="redirect-btn">Go to trip advisor</button>
-      <button id="change-text-btn">Change Heading Text</button>
-      <button id="change-items-text-btn">Change Text of All Elements</button>
-      <button id="create-element-btn">Create New Element</button>
-      <button id="append-element-btn">Create New Element At The End</button>
-      <button id="remove-element-btn">Delete Element</button>
-    </div>
-  
-    <div id="heading">Heading</div>
-    <div class="item">Element 1</div>
-    <div class="item">Element 2</div>
-    <div class="item">Element 3</div>
-    <div id="message">New Text</div>
-    <div id="text-node">Text Node</div>
-    <div id="text-content">Text for change</div>
-    <div id="parent">Parent Element</div>
-    <div id="remove-element">Element for deleting</div>  
 
     <div class="section-popular">
       <div class="main-heading">Popular Destinations</div>
@@ -267,6 +246,19 @@
         </div>
       </div>
     </div>
+
+    <ul id="list">
+      <li>Application 1</li>
+      <li>Application 2</li>
+      <li>Application 3</li>
+    </ul>
+
+    <div class="menu" id="menu">
+      <button data-action="add">Add an application</button>
+      <button data-action="remove">Remove an application</button>
+      <button data-action="clear">Clear list of applications</button>
+    </div>
+
     <script src="script.js"></script>
     <script
       type="module"
