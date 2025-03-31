@@ -67,3 +67,37 @@ document.getElementById('menu').addEventListener('click', function (event) {
     }
   }
 });
+
+
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('mouseover', (event) => {
+    event.target.classList.add('hovered');
+  });
+  box.addEventListener('mouseout', (event) => {
+    if (!event.relatedTarget || !event.relatedTarget.classList.contains('box')) {
+      event.target.classList.remove('hovered');
+    }
+  });
+});
+
+const draggable = document.getElementById('draggable');
+let offsetX, offsetY, isDragging = false;
+
+draggable.addEventListener('mousedown', (event) => {
+  isDragging = true;
+  offsetX = event.clientX - draggable.getBoundingClientRect().left;
+  offsetY = event.clientY - draggable.getBoundingClientRect().top;
+  draggable.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', (event) => {
+  if (isDragging) {
+    draggable.style.left = event.clientX - offsetX + 'px';
+    draggable.style.top = event.clientY - offsetY + 'px';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  draggable.style.cursor = 'grab';
+});
