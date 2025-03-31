@@ -7,59 +7,57 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Функція "Діалог з користувачем"
+
 function startDialog() {
-  let userName = prompt("Як тебе звати?");
+  let userName = prompt("What's your name");
   if (userName !== null) {
-    alert("Привіт, " + userName + "!");
+    alert("Hi, " + userName + "!");
   }
 
-  let isAdult = confirm("Тобі є 18 років?");
+  let isAdult = confirm("Are you 18?");
   if (isAdult) {
-    alert("Вітаємо! Ви дорослий.");
+    alert("Congrats! You're an adult");
   } else {
-    alert("Вибачте, вам менше 18 років.");
+    alert("You're not an adult :(");
   }
 
   let numberOfAttempts = 0;
-  let correctAnswer = "42";
+  let correctAnswer = "2";
 
-  // Цикл для спроби вгадати правильну відповідь
   while (numberOfAttempts < 3) {
-    let userAnswer = prompt("Яка відповідь на основне питання життя, всесвіту і всього такого?");
+    let userAnswer = prompt("Guess the number from 1-10 and get a discount");
     if (userAnswer === correctAnswer) {
-      alert("Правильно! Ваша відповідь — " + userAnswer);
+      alert("Correct! Your answer is " + userAnswer);
       break;
     } else {
-      alert("Неправильно, спробуйте ще раз.");
+      alert("Not correct :(");
       numberOfAttempts++;
     }
   }
 
-  // Виклик функції виведення інформації про розробника
-  displayDeveloperInfo("Іванов", "Іван", "Frontend Developer");
+  displayDeveloperInfo("Martyshenko", "Iryna", "Frontend Developer");
 }
 
-// Функція для виведення інформації про розробника
 function displayDeveloperInfo(lastName, firstName, position = "Frontend Developer") {
-  alert("Розробник: " + firstName + " " + lastName + "\nПосада: " + position);
+  alert("Developer: " + firstName + " " + lastName + "\Position: " + position);
 }
 
-// Функція порівняння двох рядків
+
 function compareStrings(str1, str2) {
   if (str1.length > str2.length) {
-    alert("Більший рядок: " + str1);
+    alert("Longer string: " + str1);
   } else if (str1.length < str2.length) {
-    alert("Більший рядок: " + str2);
+    alert("Longer string: " + str2);
   } else {
-    alert("Обидва рядки рівні за довжиною.");
+    alert("Same strings");
   }
 }
 
-// // Приклад використання функції порівняння рядків
-// compareStrings("Привіт", "Здрастуйте");
 
-// startDialog();
+compareStrings("Hi", "Hello");
+
+startDialog();
+
 
 document.getElementById("change-bg-btn").addEventListener("click", () => {
 
@@ -69,21 +67,20 @@ document.getElementById("change-bg-btn").addEventListener("click", () => {
   }, 30000);
 });
 
-// Перенаправити на іншу сторінку
+
 document.getElementById("redirect-btn").addEventListener("click", () => {
   location.href = "https://www.tripadvisor.com";
 });
 
-// Змінити текст заголовка
 document.getElementById("change-text-btn").addEventListener("click", () => {
-  document.getElementById("heading").innerHTML = "Новий текст заголовка";
+  document.getElementById("heading").innerHTML = "New Heading Text";
 });
 
 
 document.getElementById("change-items-text-btn").addEventListener("click", () => {
   let items = document.querySelectorAll(".item");
   items.forEach(item => {
-    item.textContent = "Новий текст для кожного елементу";
+    item.textContent = "New element text";
   });
 });
 
@@ -92,16 +89,11 @@ document.getElementById("create-element-btn").addEventListener("click", () => {
 
   let newDiv = document.createElement("div");
 
-
-  let newText = document.createTextNode("Це новий елемент, доданий на сторінку!");
+  let newText = document.createTextNode("New Element Created");
   newDiv.appendChild(newText);
 
-  document.body.appendChild(newDiv);
-});
-
-document.getElementById("append-element-btn").addEventListener("click", () => {
   let parentElement = document.getElementById("parent");
-  parentElement.append("Текст після усіх елементів");
+  parentElement.insertAdjacentElement("afterend", newDiv);
 });
 
 document.getElementById("remove-element-btn").addEventListener("click", () => {
